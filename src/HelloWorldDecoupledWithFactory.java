@@ -6,6 +6,7 @@ public class HelloWorldDecoupledWithFactory {
 
         ApplicationContext ctx = new ClassPathXmlApplicationContext("app-context.xml");
         MessageRenderer mr =  ctx.getBean("renderer", MessageRenderer.class);
+        
         mr.render();
     }
 }
